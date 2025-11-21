@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+        // Demonstration of Selected JavaScript Array Methods
+
+        console.log("=== Array length ===");
+        // length: Returns the total number of elements in the array.
+        let arr = [10, 20, 30, 40];
+        console.log("Array:", arr, "| Length:", arr.length);
+
+
+        console.log("\n=== Array toString() ===");
+        // toString(): Converts the array into a comma-separated string.
+        console.log("toString():",typeof arr.toString());
+
+
+        console.log("\n=== Array at() ===");
+        // at(): Returns the element at a given index, supports negative indexing.
+        console.log("Element at index 2:", arr.at(2));
+        console.log("Element at index -1:", arr.at(-1));
+
+
+        console.log("\n=== Array join() ===");
+        // join(): Joins all elements into a string with a specified separator.
+        console.log("Joined with '-':", arr.join("-"));
+
+
+        console.log("\n=== Array pop() ===");
+        // pop(): Removes and returns the last element of the array.
+        let popped = arr.pop();
+        console.log("After pop:", arr, "| Popped:", popped);
+
+
+        console.log("\n=== Array push() ===");
+        // push(): Adds one or more elements to the end of the array and returns new length.
+        let newLen = arr.push(50, 60);
+        console.log("After push:", arr, "| New Length:", newLen);
+
+
+        console.log("\n=== Array shift() ===");
+        // shift(): Removes and returns the first element of the array.
+        let shifted = arr.shift();
+        console.log("After shift:", arr, "| Shifted:", shifted);
+
+
+        console.log("\n=== Array unshift() ===");
+        // unshift(): Adds elements to the beginning and returns the new length.
+        let newLen2 = arr.unshift(5, 8);
+        console.log("After unshift:", arr, "| New Length:", newLen2);
+
+
+        console.log("\n=== Array isArray() ===");
+        // Array.isArray(): Checks if a value is an array.
+        console.log("Is arr an array?", Array.isArray(arr));
+        console.log("Is 'Hello' an array?", Array.isArray("Hello"));
+
+
+        console.log("\n=== Array delete (not a method) ===");
+        // delete: Removes an element but leaves an empty slot (hole) in the array.
+        let arr2 = [1, 2, 3, 4];
+        console.log("Before delete:", arr2);
+        delete arr2[1];
+        console.log("After delete:", arr2);
+
+
+        console.log("\n=== Array concat() ===");
+        // concat(): Merges two or more arrays and returns a new array.
+        let a1 = [1, 2];
+        let a2 = [3, 4];
+        let merged = a1.concat(a2);
+        console.log("Concatenated:", merged);
+
+
+        console.log("\n=== Array copyWithin() ===");
+        // copyWithin(): Copies array elements within the array to a target index.
+        let arr3 = [10, 20, 30, 40, 50];
+        console.log("Before:", arr3);
+        arr3.copyWithin(1, 3);  // copy values starting at index 3 to index 1
+        console.log("After copyWithin:", arr3);
+
+
+        console.log("\n=== Array flat() ===");
+        // flat(): Flattens nested arrays into a single-level array.
+        let nested = [1, [2, 3], [4, [5, 6]]];
+        console.log("Before:", nested);
+        console.log("After flat(2):", nested.flat());
+
+
+        console.log("\n=== Array slice() ===");
+        // slice(): Returns selected elements in a new array without modifying original.
+        let slArr = [10, 20, 30, 40, 50];
+        console.log("Original:", slArr);
+        console.log("Sliced 1 to 4:", slArr.slice(1, 4));
+
+
+        console.log("\n=== Array splice() ===");
+        // splice(): Adds/removes elements from an array.
+        let spArr = [100, 200, 300, 400];
+        console.log("Before:", spArr);
+        let removed = spArr.splice(1, 2, 999, 888);
+        console.log("After splice:", spArr, "| Removed:", removed);
+
+
+        console.log("\n=== Array toSpliced() ===");
+        // toSpliced(): Same as splice(), but returns a NEW array without modifying the original.
+        let tspArr = [10, 20, 30, 40];
+        console.log("Original:", tspArr);
+        let newArr = tspArr.toSpliced(1, 2, 111, 222,333);
+        console.log("New Array (toSpliced):", newArr);
+        console.log("Original Unchanged:", tspArr);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.forEach(function(item) {
+    
+    
+});
+
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let fruit = fruits[0];
+// let fruit = fruits[fruits.length - 1];
+// cars.sort()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
