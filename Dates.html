@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+// ===== 9 Ways to Create Dates =====
+
+// 1. Current Date and Time
+let d1 = new Date();  
+console.log("1. new Date():", d1);
+
+// 2. From date string
+let d2 = new Date("2025-11-18");
+console.log("2. new Date('2025-11-18'):", d2);
+
+// 3. Year, Month (0-based month)
+let d3 = new Date(2025, 10); // November (10, since Jan = 0)
+console.log("3. new Date(2025,10):", d3);
+
+// 4. Year, Month, Day
+let d4 = new Date(2025, 10, 18);
+console.log("4. new Date(2025,10,18):", d4);
+
+// 5. + Hours
+let d5 = new Date(2025, 10, 18, 11);
+console.log("5. new Date(2025,10,18,11):", d5);
+
+// 6. + Minutes
+let d6 = new Date(2025, 10, 18, 11, 30);
+console.log("6. new Date(2025,10,18,11,30):", d6);
+
+// 7. + Seconds
+let d7 = new Date(2025, 10, 18, 11, 30, 20);
+console.log("7. new Date(2025,10,18,11,30,20):", d7);
+
+// 8. + Milliseconds
+let d8 = new Date(2025, 10, 18, 11, 30, 20, 500);
+console.log("8. new Date(2025,10,18,11,30,20,500):", d8);
+
+// 9. Milliseconds since 1970
+let d9 = new Date(1700280000000);
+console.log("9. new Date(milliseconds):", d9);
+
+// ===== DISPLAY METHODS =====
+const d = new Date();  // current date
+console.log("\n--- Date Display Methods ---");
+console.log("toString():", d.toString());         // Full date with timezone
+console.log("toDateString():", d.toDateString()); // Readable date only
+console.log("toUTCString():", d.toUTCString());   // UTC time
+console.log("toISOString():", d.toISOString());   // ISO standard
+
+// ===== GET METHODS =====
+console.log("\n--- GET Methods ---");
+console.log("Year:", d.getFullYear());   // YYYY
+console.log("Month (0-11):", d.getMonth()); // 0 = Jan
+console.log("Day of month:", d.getDate());  // 1-31
+console.log("Day of week:", d.getDay());    // 0=Sunday
+console.log("Hours:", d.getHours());
+console.log("Minutes:", d.getMinutes());
+console.log("Seconds:", d.getSeconds());
+console.log("Milliseconds:", d.getMilliseconds());
+console.log("Time in ms since Jan 1, 1970:", d.getTime());
+
+// ===== SET METHODS =====
+let setDate = new Date();  // copy of current date
+console.log("\n--- Before Setting:", setDate);
+
+setDate.setFullYear(2030);       // change year
+setDate.setMonth(5);             // June (months 0-based)
+setDate.setDate(15);             // change day
+setDate.setHours(10);            // change hours
+setDate.setMinutes(45);          // change minutes
+setDate.setSeconds(30);          // change seconds
+setDate.setMilliseconds(999);    // change ms
+
+console.log("--- After Setting:", setDate);
+
+</script>
+</body>
+</html>
