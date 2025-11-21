@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String_Methods</title>
+</head>
+
+<body>
+    <script>
+
+        let str7 = "Addagiri Sneha Royal";
+        let res = "";
+        for (let x of str7) {
+            res += (x === " ") ? "" : x;
+        }
+        console.log(res);
+
+
+        let rest = "";
+        for (let y of str7) {
+            if (y === " ")
+                rest += "";
+            else
+                rest += y;
+        }
+        console.log(rest);
+
+        let str = "My Name is Sneha";
+        console.log(str.length);
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        let str1 = "      My Name is Srujana ";
+        console.log(str1.length);
+        console.log(str1.trimStart());
+        console.log(str1.trimEnd());
+        console.log(str1.trim());
+
+        let str3 = " Hello";
+        let str4 = " World";
+        let str5 = str3.concat(str4);
+        console.log(str5);
+        let str6 = str4.concat(str3);
+        console.log(str6);
+
+        console.log(str3.charAt(2));  // returns a character at specified index.
+        console.log(str3.charCodeAt(4)); // gives ASCII value of specified index character.
+
+        let str8 = "Let me achieve the CSA exam";
+        console.log(str8.slice(-8, -5)); // it takes negative values...
+        console.log(str8.substring(19, 27));// new one and it does not take negative value
+        console.log(str8.substr(19, 27)); //old one 
+
+
+        console.log(str8.split(" ").reverse().join(" ")); //exam CSA the achieve me Let
+        console.log(str8.split("").reverse().join("")); //maxe ASC eht eveihca em teL
+
+
+        let str9 = "5";
+        console.log(str9.padStart(5, "0"));
+        console.log(str9.padEnd(5, "0"));
+
+        let str10 = "SNEHA";
+        console.log(str10.split("")); //Makes string into Array 
+
+        console.log(str10.repeat(5));
+
+        let g = "This is a new string";
+        let moni = g.split("$");
+        console.log(typeof moni);
+
+        console.log(g.replace(" ", "$"));
+        console.log(g.replaceAll(" ", "$"));
+
+        console.log(g.at(10));
+        console.log(g[10]);
+
+        let text = "Hello world!";
+        let result = text.isWellFormed(); //true
+        console.log(result);
+
+        let text1 = "Hello World \uD800"; 
+        let result1 = text1.isWellFormed();
+        console.log(result1);
+        console.log(text1.toWellFormed());
+
+    </script>
+</body>
+
+</html>
